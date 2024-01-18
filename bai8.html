@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function findNum(arr, number) {
+    const n = arr.length;
+
+    for (let i = 0; i < n - 2; i++) {
+        for (let j = i + 1; j < n - 1; j++) {
+            for (let k = j + 1; k < n; k++) {
+                if (arr[i] + arr[j] + arr[k] === number) {
+                    return [arr[i], arr[j], arr[k]];
+                }
+            }
+        }
+    }
+
+    return [];
+}
+const myArray = [1, 2, 3, 4, 5, 6, 7];
+const myNumber = 18;
+const result = findNum(myArray, myNumber);
+console.log( result);
+
+</script>
+</html>

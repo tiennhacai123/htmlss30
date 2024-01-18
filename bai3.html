@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let newStr = prompt("Nhap vao mot chuoi");
+    function arrangeStr(str){
+        let charArr = str.split('');
+        let letters = charArr.filter(char => isNaN(char));
+        let digits = charArr.filter(char => !isNaN(char));
+        letters.sort();
+        digits.sort();
+        let newArr = letters.join('') + digits.join('');
+        return newArr;
+
+    }
+    let result = arrangeStr(newStr);
+    console.log("Chuoi sau khi sap xep la",result);
+</script>
+</html>
